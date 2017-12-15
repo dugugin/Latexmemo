@@ -1,0 +1,66 @@
+\documentclass[11pt, thmnum, eqsecnum, allcites, dark]{mathbeamer}
+%%%%%%%%%%%%%
+%% Options %%
+%%%%%%%%%%%%%
+%% thmnum: numbered theorems
+%% eqsecumn: number equaiton with section
+%% authoryear: author-year style reference
+%% allcites: output all the reference in bib.bib
+%% dark: use dark color style
+%% light: use light color style
+%% nds: not use the default setting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%===========================
+% your definitions:
+%===========================
+\input{slides/usrdef}
+
+
+
+%===========================
+% your title/name/institute:
+%===========================
+\title[\sc Mean Curvature Flow \& Ricci Flow]{\sc On the Evolution of Mean Curvature Flow\\ with Background Ricci Flow}
+\author{Stu Name}
+\date{\today}
+\institute[USTC]{School of Mathematical Sciences, USTC}
+
+\begin{document}
+%===========================
+% your slides:
+%===========================
+%--------------------生成目录页，目录太长时加选项[shrink]
+	\begin{frame}{\sc{Contents}}
+	\addtocounter{framenumber}{-2}%-----------位置放在beginframe之后，不然无效
+	\thispagestyle{empty}
+	\tableofcontents[hideallsubsections]    
+	% 也可以插入选项 [pausesections]
+	%列目录时，隐藏所有的小节\tableofcontents[hideallsubsections]
+	\end{frame}
+
+
+%===========================
+% example slides:
+%===========================
+%\input{slides/main}
+
+%\input{examples/blocks}
+%\input{examples/columns}
+%\input{examples/description}
+%\input{examples/definition}
+\input{examples/equats}
+%\input{examples/example}
+%\input{examples/figures}
+%\input{examples/hyperlinks}
+%\input{examples/lists}
+%\input{examples/table}
+%\input{examples/theorem}
+
+
+%===========================
+% bibliography
+%===========================
+%---\bibliography{slides/bib}%并没有cite但是参考文献全列出来了
+%---usrdef.tex已经设定好了thanks和ref部分
+\end{document}

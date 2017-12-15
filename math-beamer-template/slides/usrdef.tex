@@ -1,0 +1,98 @@
+%===================================
+%% Self defined command
+%===================final options====================
+
+% ------------------设置用acrobat打开就会全屏显示  
+%\hypersetup{pdfpagemode=FullScreen}
+
+%--------------------是否逐条显示--------------------
+%\beamerdefaultoverlayspecification{<+->}
+
+
+
+%================packages===============================
+%%已有的package：
+%hyperref, mathtools, bm
+%babel
+%amsrefs
+\usepackage{float}
+\usepackage{multirow}%表格
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{color,xcolor}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage{graphicx}%图表
+\usepackage{wrapfig}%图表
+\usepackage{supertabular}
+\usepackage{harvard}%citation宏包
+\usepackage{xeCJK}
+
+
+%======================================================
+%-----------------------others---------------------------
+\newcommand{\eps}{\varepsilon}%简化$\varepsilon$的表示
+%================theorem environments==========
+%% Note: the following theorem environments
+%%       already defined in mathbeamer.cfg
+%%       Not need to define it again
+%%\theoremstyle{plain}
+%%\newtheorem{thm}{Theorem}[section]
+%%\newtheorem{lem}[thm]{Lemma}
+%%\newtheorem{prop}[thm]{Proposition}
+%%\newtheorem{cor}[thm]{Corollary}
+%%\theoremstyle{definition}
+%%\newtheorem{defn}[thm]{Definition}
+%%\theoremstyle{example}
+%%\newtheorem{conj}{Conjecture}
+%%\newtheorem{exmp}{Example}
+%%\newtheorem*{rmk}{Remark}
+%%\theoremstyle{break}
+%%\newtheorem{bthm}{Theorem}[section]
+%%\newtheorem{blem}[thm]{Lemma}
+%%\newtheorem{bprop}[thm]{Proposition}
+%%\newtheorem{bcor}[thm]{Corollary}
+\newcommand{\mthm}{Theorem}
+%===================================================
+%---------------------------中文字体
+\setCJKmainfont[BoldFont={NotoSerifCJKsc-Bold}]{NotoSerifCJKsc-Regular}
+\setCJKsansfont{NotoSerifCJKsc-Regular}
+
+%----------------------行距
+%\linespread{1.3}
+
+%=========================preferences==========================
+%---------------item的符号改为三角形
+\setbeamertemplate{items}[triangle]%[circle,ball,]
+
+%----------------citation
+\citationstyle{dcu}%-----author,year
+%\bibliographystyle{}
+
+%======================at documents===================================
+
+\AtEndDocument{%
+	%========================
+	% thanks
+	%========================
+	\section{Thanks}
+	\newcounter{ffn}
+	\setcounter{ffn}{\value{framenumber}}
+	\renewcommand{\insertframenumber}{\inserttotalframenumber}
+	\begin{frame}
+	\begin{center}
+		\LARGE{\bfseries
+			Thanks!
+		}
+	\end{center}
+\end{frame}
+%========================
+% bibliography
+%========================
+\section{Reference}
+\begin{frame}[t, allowframebreaks]{Reference}
+\bibliography{slides/bib}
+\end{frame}
+\setcounter{framenumber}{\value{ffn}}
+}
+
